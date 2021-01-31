@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "tUhYyJ9sMvnhZPFVyVm9rFIZCGiqRbcbeKRwdj2puOq94O0vpgKeNnH+xz95P9L4QPsdvu57pgpSDiRQko3rqw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\this_\\source\\repos\\GhostRider2\\UI\\UI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\this_\\.nuget\\packages\\materialdesigncolors\\1.2.7\\materialdesigncolors.1.2.7.nupkg.sha512",
+    "C:\\Users\\this_\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512",
+    "C:\\Users\\this_\\.nuget\\packages\\showmethexaml\\2.0.0\\showmethexaml.2.0.0.nupkg.sha512",
+    "C:\\Users\\this_\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}
