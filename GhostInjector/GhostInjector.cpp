@@ -90,7 +90,9 @@ int main(int argc, char **argv)
 		std::wstring l_dll_path = std::wstring_convert<std::codecvt_utf8<wchar_t>>().from_bytes(dll_path);
         inject(pid, l_dll_path);
 		std::cout << "Injected: " << dll_path << "\nProcess ID:" << pid << "\n";
+		return 0;
     }
+	return 1;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

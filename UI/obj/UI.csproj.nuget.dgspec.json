@@ -4,6 +4,16 @@
     "C:\\Users\\this_\\source\\repos\\GhostRider2\\UI\\UI.csproj": {}
   },
   "projects": {
+    "C:\\Users\\this_\\source\\repos\\GhostRider2\\GhostInjector\\GhostInjector.vcxproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\this_\\source\\repos\\GhostRider2\\GhostInjector\\GhostInjector.vcxproj",
+        "projectName": "GhostInjector",
+        "projectPath": "C:\\Users\\this_\\source\\repos\\GhostRider2\\GhostInjector\\GhostInjector.vcxproj"
+      },
+      "frameworks": {
+        "native": {}
+      }
+    },
     "C:\\Users\\this_\\source\\repos\\GhostRider2\\UI\\UI.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -31,7 +41,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\this_\\source\\repos\\GhostRider2\\GhostInjector\\GhostInjector.vcxproj": {
+                "projectPath": "C:\\Users\\this_\\source\\repos\\GhostRider2\\GhostInjector\\GhostInjector.vcxproj"
+              }
+            }
           }
         },
         "warningProperties": {

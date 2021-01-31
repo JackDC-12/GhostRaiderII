@@ -13,7 +13,7 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="GhostRaiderII" Height="450" Width="500" ResizeMode="CanMinimize">
+        Title="GhostRaiderII" Height="475" Width="500" ResizeMode="CanMinimize">
     <Grid Margin="0,0,0,0">
 
         <materialDesign:Card
@@ -179,14 +179,22 @@
                     BorderBrush="#ff5d86"
                     Style="{StaticResource MaterialDesignFloatingActionButton}"
                     materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
-                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="False"
                     materialDesign:ButtonProgressAssist.IndicatorForeground="#f8bbd0"
-                    Margin="300 0 0 0" Click="RunButton_Click">
+                    Margin="300 -15 0 0" Click="RunButton_Click">
                     <materialDesign:PackIcon
                         Kind="RunFast"
                         Height="25"
                         Width="25" />
                 </Button>
+                <TextBlock
+                    Grid.Row="2"
+                    Margin="0 90 10 0"
+                    Style="{StaticResource MaterialDesignHeadline6TextBlock}"
+                    Foreground="#eee"
+                    FontSize="10"
+                    HorizontalAlignment="Center"
+                    Text="After the DLL in injected, all changes of Mode and Save/Load path are applied automatically." Height="15" />
             </Grid>
         </materialDesign:Card>
 

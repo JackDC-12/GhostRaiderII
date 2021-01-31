@@ -64,6 +64,15 @@
         "frameworkReferences": [
           "Microsoft.WindowsDesktop.App.WPF"
         ]
+      },
+      "GhostInjector/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/GhostInjector.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GhostInjector.dll": {}
+        }
       }
     }
   },
@@ -188,10 +197,16 @@
         "showmethexaml.2.0.0.nupkg.sha512",
         "showmethexaml.nuspec"
       ]
+    },
+    "GhostInjector/1.0.0": {
+      "type": "project",
+      "path": "../GhostInjector/GhostInjector.vcxproj",
+      "msbuildProject": "../GhostInjector/GhostInjector.vcxproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "GhostInjector >= 1.0.0",
       "MaterialDesignThemes >= 3.2.0",
       "Microsoft-WindowsAPICodePack-Shell >= 1.1.4",
       "ShowMeTheXAML >= 2.0.0"
@@ -228,7 +243,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\this_\\source\\repos\\GhostRider2\\GhostInjector\\GhostInjector.vcxproj": {
+              "projectPath": "C:\\Users\\this_\\source\\repos\\GhostRider2\\GhostInjector\\GhostInjector.vcxproj"
+            }
+          }
         }
       },
       "warningProperties": {
