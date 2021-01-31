@@ -13,14 +13,13 @@
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
-        Title="GhostRaiderII" Height="500" Width="800" ResizeMode="CanMinimize">
+        Title="GhostRaiderII" Height="450" Width="500" ResizeMode="CanMinimize">
     <Grid Margin="0,0,0,0">
 
         <materialDesign:Card
           Background="#03a9f4"
           Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-          Padding="0"
-          Width="300" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+          Padding="0" Height="130" Margin="0,0,0,0" VerticalAlignment="Top">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -35,28 +34,28 @@
                 <Separator
                     Grid.Row="1"
                     Style="{StaticResource MaterialDesignLightSeparator}" />
-                <TextBox
+                <TextBox x:Name="TRFolderTxt"
                     Grid.Row="2"
-                    Margin="10,10,0,0"
-                    HorizontalAlignment="Left"
-                    materialDesign:HintAssist.FloatingScale="0.90"
+                    Margin="10,10,100,0"
+                    materialDesign:HintAssist.FloatingScale="1.2"
                     materialDesign:HintAssist.Hint="TR2 Folder Path"
-                    FontSize="14"
+                    FontSize="12"
+                    IsEnabled="False"
                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                    VerticalAlignment="Center" Width="200" Height="45" />
+                    VerticalAlignment="Top" Height="45" />
                 <StackPanel
                     Grid.Row="1"
                     Orientation="Horizontal"
                     Margin="0,20,16,-13"
                     Width="59"
                     HorizontalAlignment="Right" Grid.RowSpan="2">
-                    <Button
+                    <Button x:Name="TRFolderButton"
                         Style="{StaticResource MaterialDesignFloatingActionButton}"
                         Padding="2 0 2 0"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top"
                         Background="#4fc3f7"
-                        BorderBrush="#FF80D8FF">
+                        BorderBrush="#FF80D8FF" Click="TRFolderButton_Click">
                         <materialDesign:PackIcon
                             Kind="FolderSearch"
                             Height="25"
@@ -70,8 +69,7 @@
         <materialDesign:Card
           Background="{DynamicResource PrimaryHueLightBrush}"
           Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-          Padding="0"
-          Width="300" Height="150" Margin="0,150,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+          Padding="0" Height="130" Margin="0,130,0,0" VerticalAlignment="Top">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -86,27 +84,27 @@
                 <Separator
                     Grid.Row="1"
                     Style="{StaticResource MaterialDesignLightSeparator}" />
-                <TextBox
+                <TextBox x:Name="SaveLoadTxt"
                     Grid.Row="2"
-                    Margin="10,10,0,0"
-                    HorizontalAlignment="Left"
-                    materialDesign:HintAssist.FloatingScale="0.90"
+                    Margin="10,10,100,0"
+                    materialDesign:HintAssist.FloatingScale="1.2"
                     materialDesign:HintAssist.Hint="Save/Load Folder Path"
-                    FontSize="14"
+                    FontSize="12"
+                    IsEnabled="False"
                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                    VerticalAlignment="Center" Width="200" Height="45" />
+                    VerticalAlignment="Top" Height="45" />
                 <StackPanel
                     Grid.Row="1"
                     Orientation="Horizontal"
                     Margin="0,20,16,-13"
                     Width="59"
                     HorizontalAlignment="Right" Grid.RowSpan="2">
-                    <Button
+                    <Button x:Name="SaveLoadFolderButton"
                         Style="{StaticResource MaterialDesignFloatingActionButton}"
                         Padding="2 0 2 0"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Top"
-                        ToolTip="MaterialDesignFloatingActionButton">
+                        ToolTip="MaterialDesignFloatingActionButton" Click="SaveLoadFolderButton_Click">
                         <materialDesign:PackIcon
                             Kind="FolderSearch"
                             Height="25"
@@ -118,10 +116,9 @@
         </materialDesign:Card>
 
         <materialDesign:Card
-          Background="#ff5d86"
+          Background="#f44336"
           Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-          Padding="0"
-          Width="300" Height="150" Margin="0,300,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+          Padding="0" Margin="0,260,0,0">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -132,89 +129,66 @@
                   Grid.Row="0"
                   Margin="16 16 16 4"
                   Style="{StaticResource MaterialDesignHeadline6TextBlock}"
-                  Text="3. Select Mode & Start" />
+                  Text="3. Select Mode &amp; Start" />
                 <Separator
                     Grid.Row="1"
                     Style="{StaticResource MaterialDesignLightSeparator}" />
-                <TextBox
+                <TextBox x:Name="GhostModeText"
                     Grid.Row="2"
-                    Margin="10,10,0,0"
+                    Margin="10,5,0,0"
                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                    materialDesign:HintAssist.FloatingScale="0.70"
+                    materialDesign:HintAssist.FloatingScale="0.90"
                     materialDesign:HintAssist.Hint="Mode"
-                    Text="Write"
-                    VerticalAlignment="Top" HorizontalAlignment="Left" Width="50" Height="45"/>
+                    Text="Reproduce"
+                    IsEnabled="False"
+                    Foreground="White"
+                    VerticalAlignment="Top" HorizontalAlignment="Left" Width="80" Height="45"/>
                 <StackPanel
                     Grid.Row="1"
                     Orientation="Horizontal"
-                    Margin="60,20,0,-13"
+                    Margin="120,20,0,-13"
                     Width="59"
                     HorizontalAlignment="Left" Grid.RowSpan="2">
                     <StackPanel.LayoutTransform>
-                        <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+                        <ScaleTransform ScaleX="1.8" ScaleY="1.8" />
                     </StackPanel.LayoutTransform>
-                    <ToggleButton
+                    <ToggleButton x:Name="GhostModeToogle"
                         Padding="2 0 2 0"
                         Style="{StaticResource MaterialDesignSwitchToggleButton}"
-                        Margin="0,0,0,0" Height="50" Width="70"
-                        VerticalAlignment="Top">
-                        <materialDesign:PackIcon Kind="Walk" />
+                        Margin="0,0,0,0" Height="50" Width="50"
+                        VerticalAlignment="Top" Click="GhostModeToogle_Click">
+                        <materialDesign:PackIcon Kind="Walk" Foreground="#ff1744" />
                         <materialDesign:ToggleButtonAssist.OnContent>
                             <materialDesign:PackIcon Kind="Pen" />
                         </materialDesign:ToggleButtonAssist.OnContent>
                     </ToggleButton>
                 </StackPanel>
-                <Separator Grid.Row="2" Style="{StaticResource MaterialDesignDarkSeparator}" Margin="8,0,8,0" RenderTransformOrigin="0.5,0.5" Width="100">
+                <Separator Grid.Row="2" Style="{StaticResource MaterialDesignLightSeparator}" Margin="50,-10,8,0" RenderTransformOrigin="0.5,0.5" Width="80">
                     <Separator.RenderTransform>
                         <TransformGroup>
-                            <ScaleTransform/>
+                            <ScaleTransform ScaleX="1" ScaleY="1.8" />
                             <SkewTransform/>
                             <RotateTransform Angle="90"/>
                             <TranslateTransform/>
                         </TransformGroup>
                     </Separator.RenderTransform>
                 </Separator>
-                <Button
-                    Grid.Row="2"
-                    Style="{StaticResource MaterialDesignFloatingActionLightButton}"
-                    Margin="150 0 0 0"
-                    Command="{Binding SaveCommand}"
-                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="{Binding IsSaving}"
-                    materialDesign:ButtonProgressAssist.Value="{Binding SaveProgress}">
-                    <!-- simple example of toggling/animating pack icon with a data trigger-->
-                    <materialDesign:PackIcon Height="24" Width="24">
-                        <materialDesign:PackIcon.Style>
-                            <Style TargetType="materialDesign:PackIcon" BasedOn="{StaticResource {x:Type materialDesign:PackIcon}}">
-                                <Setter Property="Kind" Value="CloudSync" />
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Binding IsSaveComplete}" Value="True">
-                                        <Setter Property="Kind" Value="Check" />
-                                        <DataTrigger.EnterActions>
-                                            <BeginStoryboard>
-                                                <Storyboard>
-                                                    <DoubleAnimation
-                                                        Storyboard.TargetProperty="Opacity"
-                                                        From="0"
-                                                        To="1"
-                                                        Duration="0:0:0.8" />
-                                                </Storyboard>
-                                            </BeginStoryboard>
-                                        </DataTrigger.EnterActions>
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </materialDesign:PackIcon.Style>
-                    </materialDesign:PackIcon>
+                <Button x:Name="RunButton"
+                    Grid.Row="2"                    
+                    Background="#ff1744"
+                    BorderBrush="#ff5d86"
+                    Style="{StaticResource MaterialDesignFloatingActionButton}"
+                    materialDesign:ButtonProgressAssist.IsIndicatorVisible="True"
+                    materialDesign:ButtonProgressAssist.IsIndeterminate="True"
+                    materialDesign:ButtonProgressAssist.IndicatorForeground="#f8bbd0"
+                    Margin="300 0 0 0" Click="RunButton_Click">
+                    <materialDesign:PackIcon
+                        Kind="RunFast"
+                        Height="25"
+                        Width="25" />
                 </Button>
             </Grid>
         </materialDesign:Card>
-
-        <!--<Grid.LayoutTransform>
-            <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
-        </Grid.LayoutTransform> -->
-        <Grid Margin="0,300,0,0">
-
-        </Grid>
 
     </Grid>
 </Window>
